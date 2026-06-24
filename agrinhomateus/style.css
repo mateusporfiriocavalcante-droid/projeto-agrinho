@@ -1,0 +1,213 @@
+/* --- Resets e Configurações Gerais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f9f6;
+    color: #332211;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Menu de Navegação --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e6f40;
+}
+
+.navbar .logo span {
+    color: #f3c623;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #554433;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2e6f40;
+}
+
+/* --- Seção Hero --- */
+.hero {
+    background: linear-gradient(rgba(46, 111, 64, 0.7), rgba(8c, 64, 41, 0.7)), 
+                url('https://unsplash.com') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #f3c623;
+    color: #332211;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    background-color: #e0b410;
+}
+
+/* --- Seção Sobre --- */
+.about {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.about h2 {
+    color: #2e6f40;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #554433;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Seção de Cards (Dicas) --- */
+.cards-section {
+    padding: 80px 0;
+    background-color: #f0f4f1;
+    text-align: center;
+}
+
+.cards-section h2 {
+    color: #2e6f40;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 5px solid #8c4029;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #2e6f40;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #554433;
+    font-size: 15px;
+}
+
+/* --- Rodapé --- */
+.footer {
+    background-color: #8c4029;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}
